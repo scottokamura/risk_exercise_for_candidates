@@ -2,9 +2,7 @@
 
 This repo contains a risk analysis exercise: predict whether a customer will repay their debt to a lender or not.
 
-## Problem Background
-
-## Business Case
+## Problem Background / Business Case
 Credit lending company __XYZ__ needs to determine whether a potential client will be able to repay their loan within 2 years (or at least be in a position to repay and not be in serious delinquency). The company collects basic information on the customer (age, income, etc) as well financial information (other open loans, revolving lines of credit, etc). __XYZ__ wants to know what kinds of information about a customer they can utilize to most efficiently and accurately predict whether a client is safe for the company to lend to.
 
 ## General Questions
