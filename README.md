@@ -5,6 +5,7 @@ This repo contains a risk analysis exercise: predict whether a customer will rep
 ## Problem Background
 
 ## Business Case
+Credit lending company __XYZ__ needs to determine whether a potential client will be able to repay their loan within 2 years (or at least be in a position to repay and not be in serious delinquency). The company collects basic information on the customer (age, income, etc) as well financial information (other open loans, revolving lines of credit, etc). __XYZ__ wants to know what kinds of information about a customer they can utilize to most efficiently and accurately predict whether a client is safe for the company to lend to.
 
 ## General Questions
 1. What can be said abut the population of consumers?
@@ -17,4 +18,11 @@ This repo contains a risk analysis exercise: predict whether a customer will rep
     - Number of dependents ranges from 0 - 20, with some missing values.
     - One consumer has 54 mortgage/real estate loans!
 3. What features can be used to predict that consumer might not pay?
+    - NumberOfTimes90DaysLate
+    - RevolvingUtilizationOfUnsecuredLines
+    - NumberOfOpenCreditLinesAndLoans
 4. What are some simple recommendations you can make to manage these applicants?
+![90 days late vs default percent line plot]('./images/90daysLate_vs_defaultPct.png')
+    - If a consumer has been more than 90 days late to repay their loan even once, the chance of them defaulting in 2 years jumps from less than 5% to over 40%. Check this metric and flag the potential client immediately if this value is not zero. If this value hits 2+, the chances of a serious deliquency by the consumer exceeds 50%.
+![Percent of utilized credit lines vs default percent line plot]('./images/utilCreditLines_vs_defaultPct.png')
+    - If a consumer is utilizing just over 100% of their revolving unsecured credit lines, they are the most likely to default on their loans within 2 years. Rejecting a consumer if they fall into the 100-115% range would be the safest option for the company.
